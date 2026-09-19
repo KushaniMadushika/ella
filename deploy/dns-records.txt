@@ -1,0 +1,42 @@
+# DNS Records for Explore Ella
+# ===========================
+#
+# Configure the following DNS records with your domain registrar
+# or DNS provider (e.g., Cloudflare, Namecheap, GoDaddy, Route 53).
+#
+# Replace YOUR_DOMAIN.com with your registered domain.
+# Replace YOUR_SERVER_IP with the public IP address of your web server.
+
+# --- A Records ---
+# These point your domain to the server's IP address.
+
+Type    Host    Value               TTL
+----    ----    -----               ---
+A       @       YOUR_SERVER_IP      3600
+A       www     YOUR_SERVER_IP      3600
+
+# --- How DNS Resolution Works ---
+#
+# Domain (YOUR_DOMAIN.com)
+#   ↓
+# DNS Resolver (looks up A record)
+#   ↓
+# Server IP (YOUR_SERVER_IP)
+#   ↓
+# Web Server (Apache/Nginx listening on port 80/443)
+#   ↓
+# Virtual Host (matches ServerName/server_name)
+#   ↓
+# Document Root (/var/www/YOUR_DOMAIN.com/public_html)
+#   ↓
+# index.html (served to the browser)
+#
+# --- Propagation ---
+# DNS changes can take up to 24–48 hours to propagate globally,
+# though most changes take effect within a few hours.
+#
+# --- Verification ---
+# After configuring DNS, verify with:
+#   nslookup YOUR_DOMAIN.com
+#   dig YOUR_DOMAIN.com A
+#   ping YOUR_DOMAIN.com

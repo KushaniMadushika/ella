@@ -1,0 +1,353 @@
+/* ========================================
+   RESPONSIVE DESIGN — Explore Ella
+   Mobile-first breakpoints
+   ======================================== */
+
+/* Tablet landscape and below (1024px) */
+@media (max-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .split {
+        gap: var(--space-2xl);
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-sidebar {
+        order: -1;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet portrait (768px) */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    /* Mobile navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--color-surface);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: calc(var(--header-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+        box-shadow: var(--shadow-xl);
+        transition: right var(--transition-base);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .main-nav.open {
+        right: 0;
+    }
+
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.visible {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--space-md) 0;
+        color: var(--color-text);
+        font-size: var(--fs-base);
+        border-bottom: 1px solid var(--color-border);
+        width: 100%;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--color-primary);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .header-cta {
+        margin-left: 0;
+        margin-top: var(--space-lg);
+        width: 100%;
+    }
+
+    .header-cta .btn--primary {
+        width: 100%;
+        font-size: var(--fs-sm);
+    }
+
+    /* Hero adjustments */
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        padding: var(--space-lg);
+    }
+
+    .hero .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .btn-group .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Grid adjustments */
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .split--reverse {
+        direction: ltr;
+    }
+
+    .split-image img {
+        min-height: 280px;
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item--featured {
+        grid-column: span 2;
+        grid-row: span 1;
+        aspect-ratio: 16/9;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group--full {
+        grid-column: 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Table responsive wrapper */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .data-table table {
+        min-width: 500px;
+    }
+
+    /* Lightbox */
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lightbox-prev { left: var(--space-sm); }
+    .lightbox-next { right: var(--space-sm); }
+
+    .page-hero {
+        padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+    }
+
+    /* Anchor nav */
+    .anchor-nav {
+        gap: var(--space-sm);
+    }
+
+    .anchor-nav a {
+        font-size: var(--fs-xs);
+        padding: var(--space-xs) var(--space-md);
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        aspect-ratio: 16/10;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item--featured {
+        grid-column: span 1;
+    }
+
+    .gallery-filters {
+        gap: var(--space-xs);
+    }
+
+    .filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: var(--fs-xs);
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+
+    .hero-tagline {
+        font-size: var(--fs-lg);
+    }
+
+    .cta-section h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* Lightbox */
+    .lightbox-content img {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .lightbox-caption {
+        font-size: var(--fs-xs);
+        max-width: 90%;
+        bottom: var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+}
+
+/* Small mobile (360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .experience-card {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .attraction-card .card-body {
+        padding: var(--space-lg);
+    }
+}
+
+/* Large desktop (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Extra large desktop (1920px+) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .site-header,
+    .hamburger,
+    .scroll-indicator,
+    .lightbox,
+    .nav-overlay {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .section {
+        padding: 1.5rem 0;
+    }
+}

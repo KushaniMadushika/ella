@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Explore Ella</title>
+    <meta name="description" content="Browse a curated gallery of Ella, Sri Lanka — landscapes, attractions, wildlife, culture, and the scenic train journey through the hill country.">
+    <meta property="og:title" content="Gallery — Explore Ella">
+    <meta property="og:description" content="View stunning photography from Ella, Sri Lanka — mountains, waterfalls, the Nine Arches Bridge, tea plantations, and more.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header page-header" id="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo" aria-label="Explore Ella — Home">
+                    <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 4L6 24h20L16 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M11 24l5-10 5 10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" opacity="0.5"/></svg>
+                    Explore Ella
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+                <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+                        <li><a href="activities.html" class="nav-link">Activities</a></li>
+                        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="header-cta"><a href="contact.html" class="btn btn--primary">Plan Your Visit</a></div>
+                </nav>
+                <div class="nav-overlay" id="nav-overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator" aria-hidden="true">/</span>
+                <span aria-current="page">Gallery</span>
+            </nav>
+            <h1>Gallery</h1>
+            <p>A visual journey through Ella's mountains, waterfalls, railways, and highland tea country.</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content">
+
+        <section class="section" id="gallery-section">
+            <div class="container">
+
+                <!-- Filters -->
+                <div class="gallery-filters reveal" role="toolbar" aria-label="Filter gallery by category">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="landscape">Landscapes</button>
+                    <button class="filter-btn" data-filter="attraction">Attractions</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="culture">Culture</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid reveal" id="gallery-grid">
+
+                    <!-- Featured: Landscape panorama -->
+                    <div class="gallery-item gallery-item--featured" data-category="landscape">
+                        <img src="images/gallery/landscape-panorama.jpg" alt="Panoramic view of Ella's misty green mountains and tea plantations at sunrise" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Ella Panorama</h4>
+                            <span>Landscapes</span>
+                        </div>
+                    </div>
+
+                    <!-- Nine Arches -->
+                    <div class="gallery-item" data-category="attraction">
+                        <img src="images/gallery/nine-arches.jpg" alt="Nine Arches Bridge with a blue train crossing the stone viaduct" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Nine Arches Bridge</h4>
+                            <span>Attractions</span>
+                        </div>
+                    </div>
+
+                    <!-- Sunrise -->
+                    <div class="gallery-item" data-category="landscape">
+                        <img src="images/gallery/sunrise.jpg" alt="Golden sunrise breaking through clouds over Ella's mountain peaks" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Mountain Sunrise</h4>
+                            <span>Landscapes</span>
+                        </div>
+                    </div>
+
+                    <!-- Tea fields -->
+                    <div class="gallery-item" data-category="nature">
+                        <img src="images/gallery/tea-fields.jpg" alt="Tea plucker working in terraced tea plantations with mountains behind" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Tea Country</h4>
+                            <span>Nature</span>
+                        </div>
+                    </div>
+
+                    <!-- Waterfall -->
+                    <div class="gallery-item" data-category="nature">
+                        <img src="images/gallery/waterfall.jpg" alt="Ravana Falls cascading over rocky tiers into a natural pool" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Ravana Falls</h4>
+                            <span>Nature</span>
+                        </div>
+                    </div>
+
+                    <!-- Ella town -->
+                    <div class="gallery-item" data-category="culture">
+                        <img src="images/gallery/ella-town.jpg" alt="Ella town with colourful rooftops and mountains in the background" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Ella Town</h4>
+                            <span>Culture</span>
+                        </div>
+                    </div>
+
+                    <!-- Mountain view -->
+                    <div class="gallery-item" data-category="landscape">
+                        <img src="images/gallery/mountain-view.jpg" alt="Hiker at a mountain summit with panoramic views across green valleys" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Summit View</h4>
+                            <span>Landscapes</span>
+                        </div>
+                    </div>
+
+                    <!-- Train journey -->
+                    <div class="gallery-item" data-category="travel">
+                        <img src="images/gallery/train-journey.jpg" alt="Blue Sri Lankan train curving through misty mountains" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Scenic Railway</h4>
+                            <span>Travel</span>
+                        </div>
+                    </div>
+
+                    <!-- Ella Rock trail -->
+                    <div class="gallery-item" data-category="attraction">
+                        <img src="images/gallery/ella-rock-trail.jpg" alt="Ella Rock rising above misty valleys with hikers on the trail" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Ella Rock</h4>
+                            <span>Attractions</span>
+                        </div>
+                    </div>
+
+                    <!-- Local cuisine -->
+                    <div class="gallery-item" data-category="culture">
+                        <img src="images/gallery/local-cuisine.jpg" alt="Traditional Sri Lankan rice and curry spread on a banana leaf" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Sri Lankan Cuisine</h4>
+                            <span>Culture</span>
+                        </div>
+                    </div>
+
+                    <!-- Cave -->
+                    <div class="gallery-item" data-category="attraction">
+                        <img src="images/gallery/cave-exploration.jpg" alt="Visitors exploring the entrance to Ravana Cave" loading="lazy">
+                        <div class="gallery-caption">
+                            <h4>Ravana Cave</h4>
+                            <span>Attractions</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-section">
+            <div class="container reveal">
+                <span class="section-label">Inspired?</span>
+                <h2>See It for Yourself</h2>
+                <p>These images only capture a fraction of what Ella has to offer. Plan your own visit.</p>
+                <a href="contact.html" class="btn btn--accent btn--lg">Send an Inquiry <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
+        <div class="lightbox-content">
+            <img src="" alt="">
+        </div>
+        <button class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="Explore Ella — Home">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 4L6 24h20L16 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M11 24l5-10 5 10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" opacity="0.5"/></svg>
+                        Explore Ella
+                    </a>
+                    <p>Discover the beauty of Sri Lanka's hill country. Ella offers mountains, tea estates, waterfalls, and one of the world's great railway journeys.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Ella</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="activities.html">Activities</a></li><li><a href="gallery.html">Gallery</a></li></ul>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Plan</h4>
+                    <ul class="footer-links"><li><a href="about.html#getting-there">Getting There</a></li><li><a href="about.html#best-time">Best Time to Visit</a></li><li><a href="contact.html">Send an Inquiry</a></li></ul>
+                </div>
+                <div class="footer-contact-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ella, Badulla District, Sri Lanka</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@example.com <br><small>(placeholder)</small></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Explore Ella. Academic project — for demonstration purposes only.</p>
+                <p>Built with HTML5, CSS3 &amp; JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
